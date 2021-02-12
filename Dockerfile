@@ -1,4 +1,4 @@
-FROM nextcloud:20.0.6-fpm-alpine
+FROM nextcloud:20.0.7-fpm-alpine
 
 RUN apk add --no-cache supervisor imagemagick \
   && mkdir /var/log/supervisord /var/run/supervisord
