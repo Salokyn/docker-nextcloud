@@ -1,12 +1,8 @@
-FROM nextcloud:20.0.11-fpm-alpine
+FROM nextcloud:21.0.3-fpm-alpine
 
-RUN apk add --no-cache supervisor \ 
+RUN apk add --no-cache supervisor \
     imagemagick \
-    gnu-libiconv \
-    php7-iconv \
   && mkdir /var/log/supervisord /var/run/supervisord
-
-ENV LD_PRELOAD=/usr/lib/preloadable_libiconv.so
 
 COPY supervisord.conf /
 
