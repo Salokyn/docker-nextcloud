@@ -1,4 +1,4 @@
-FROM nextcloud:20.0.10-fpm-alpine
+FROM nextcloud:20.0.11-fpm-alpine
 
 RUN apk add --no-cache supervisor \ 
     imagemagick \
